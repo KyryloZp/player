@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Web-Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/icons/apple-icon-57x57.png"/>
+  <link rel="apple-touch-icon" sizes="60x60" href="img/icons/apple-icon-60x60.png"/>
+  <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-icon-72x72.png"/>
+  <link rel="apple-touch-icon" sizes="76x76" href="img/icons/apple-icon-76x76.png"/>
+  <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-icon-114x114.png"/>
+  <link rel="apple-touch-icon" sizes="120x120" href="img/icons/apple-icon-120x120.png"/>
+  <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-icon-144x144.png"/>
+  <link rel="apple-touch-icon" sizes="152x152" href="img/icons/apple-icon-152x152.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-icon-180x180.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="img/icons/android-icon-192x192.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="96x96" href="img/icons/favicon-96x96.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png"/>
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="msapplication-TileColor" content="#E6E6FA"/>
+  <meta name="msapplication-TileImage" content="img/icons/ms-icon-144x144.png"/>
+  <meta name="theme-color" content="#E6E6FA"/>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+      });
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"/>
+  <link rel="stylesheet" href="fonts/ProximaNova/stylesheet.css"/>
+  <link rel="stylesheet" href="fonts/fontello-c5a72523/css/fontello.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="media.css" />
+
+
+
+</head>
+<body>
+  <section class="player">
+    <div class="player-header">
+      <div class="player-header_system-buttons">
+        <button class="buttons_system__shotdown"></button>
+        <button class="buttons_system__minimize"></button>
+        <button class="buttons_system__maximize"></button>
+      </div>
+      <div class="player-header_logo col-3"><img class="logo" src="img/Grooveshark logo.png" alt="Grooveshark logo"/></div>
+    </div>
+    <div class="player-content">
+      <div class="player-content_track-info"><img class="player-content_track-album" src="img/01.jpg" alt="track-01"/>
+        <div class="player-content_tittle">
+          <h1 class="player-content_Songs-name">We’ll be coming back</h1>
+          <p class="player-content_author">Calvin Harris, Example</p>
+        </div>
+      </div>
+      <div class="player-content_playlist">
+        <ul class="player-content_list"></ul>
+      </div>
+    </div>
+    <template class="playlist_template">
+      <li class="player-content_item"><i class="demo-icon icon-play mini-play-button"></i>
+        <p class="player-content_playlist-song-name"> </p>
+        <p class="player-content_playlist-song-rate"> </p>
+      </li>
+    </template>
+    <div class="player-footer">
+      <div class="player-footer_content">
+        <div class="player-footer_buttons-control">
+          <button class="button_prev"><i class="demo-icon icon-previous"></i></button>
+          <button class="button_play pause"><i class="demo-icon icon-play"></i></button>
+          <button class="button_next"><i class="demo-icon icon-next"></i></button>
+          <div class="track"></div>
+        </div>
+        <div class="player-footer_buttons-optional">
+          <div class="progress-bar">
+            <div class="progress-bar_line"></div>
+          </div>
+          <button class="button_mute"><i class="demo-icon icon-shape-2">
+            <div class="mute-bar">
+              <div class="mute-bar_line"></div>
+            </div></i></button>
+            <button class="button_random"><i class="demo-icon icon-shuffle"></i></button>
+            <button class="button_circle"><i class="demo-icon icon-repeat"></i></button>
+            <button class="button_share"><i class="demo-icon icon-share"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="app.js"></script>
+  </html>
