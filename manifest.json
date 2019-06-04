@@ -1,9 +1,12 @@
 {
   "name": "MyFirst-Player",
   "short_name": "MF-PLAYER",
-  "lang": "uk-UA",
+  "description": "Web Community Leaders landing page",
+  "lang": "en-GB",
   "start_url": "/",
-  "display": "browser",
+  "display": "standalone",
+  "theme_color": "#E6E6FA",
+  "background_color": "#E6E6FA",
   "icons": [
     {
       "src": "img/icon/apple-icon-57x57.png",
