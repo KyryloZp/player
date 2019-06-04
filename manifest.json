@@ -3,7 +3,7 @@
   "short_name": "MF-PLAYER",
   "lang": "uk-UA",
   "start_url": "/",
-  "display": "browser",
+  "display": "standalone",
   "icons": [
     {
       "src": "img/icon/apple-icon-57x57.png",
