@@ -9,29 +9,13 @@
 }
 
 @media only screen and (max-width: 768px){
-    body {
-        display: block;
-    }
     .player-content {
         width: 100%;
         height: calc(100vh - 282px);
         max-height: 100vh;
     }
     .player-content_track-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .player-content_track-album {
-        height: auto;
-        margin: 0px auto 0;
-    }
-    .player-content_Songs-name {
-        font-size: 30px;
-    }
-    .player-content_author {
-        font-size: 25px;
-        margin-top: 25px;
+        display: none;
     }
     .player-footer {
         height: 200px;
@@ -44,18 +28,8 @@
         margin: auto 0;
         width: 100%;
     }
-    .button_next, 
-    .button_prev {
-        font-size: 50px;
-        color: white;
-        width: 80px;
-        height: 60px;
-    }
-    .player-footer_buttons-control>:nth-child(2) {
-        margin: 0 50px;
-        font-size: 60px;
-        width: 80px;
-        height: 60px;
+    .player-content_playlist {
+        min-width: 100%;
     }
     .player-footer_buttons-optional {
         width: 100%;
@@ -63,9 +37,6 @@
         flex-direction: row;
         justify-content: space-between;
         margin: 0 0 0 30px;
-    }
-    .progress-bar {
-        display: none;
     }
     .button_circle, .button_mute, .button_random, .button_share {
         width: 60px;
@@ -95,6 +66,32 @@
         width: 445px;
         text-align: left;
         margin-left: 10px;
+    }
+    .player-footer_content {
+        padding: 0 16px 0 16px;
+        display: flex;
+        flex-direction: row;
+        margin: auto 0;
+        width: 100%;
+    }
+    .button_next, 
+    .button_prev {
+        font-size: 30px;
+        color: white;
+        width: 52px;
+        height: 60px;
+    }
+    .player-footer_buttons-control>:nth-child(2) {
+        margin: 0 10px;
+        font-size: 45px;
+        width: 80px;
+        height: 60px;
+    }
+    .progress-bar {
+        display: none;
+    }
+    button.button_mute {
+        display: none;
     }
 }
 /* Extra Small Devices, Phones */
