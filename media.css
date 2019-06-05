@@ -49,7 +49,7 @@
     .player {
         width: 100%;
         height: 100vh;
-        position: relative;
+        position: absolute;
         left: 0;
         top: 0;
 
@@ -96,7 +96,17 @@
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+    .player-footer_content {
+        flex-direction: column;
+    }
+    .player-footer_buttons-control {
+        justify-content: center;
+        margin-bottom: 31px;
+    }
+    .player-footer_buttons-optional {
 
+        margin: 0; 
+    }
 }
 
 /* Custom, iPhone Retina */
